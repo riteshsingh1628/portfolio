@@ -1,4 +1,5 @@
 import hero from "./assets/hero.png";
+
 export default function Portfolio() {
   const skills = {
     Languages: ["Python", "Java", "C", "JavaScript", "SQL"],
@@ -24,8 +25,16 @@ export default function Portfolio() {
 
   return (
     <div className="bg-black text-white min-h-screen font-sans scroll-smooth">
+
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-6">
+
+        <img
+          src={hero}
+          alt="hero"
+          className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-2xl mb-8 hover:scale-110 transition-all duration-500"
+        />
+
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
           Ritesh Kumar
         </h1>
@@ -89,7 +98,7 @@ export default function Portfolio() {
             {Object.entries(skills).map(([category, items]) => (
               <div
                 key={category}
-                className="bg-zinc-900 p-6 rounded-3xl shadow-lg"
+                className="bg-zinc-900 p-6 rounded-3xl shadow-lg hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer"
               >
                 <h3 className="text-2xl font-semibold mb-4">{category}</h3>
 
@@ -97,7 +106,7 @@ export default function Portfolio() {
                   {items.map((skill) => (
                     <span
                       key={skill}
-                      className="bg-black border border-zinc-700 px-4 py-2 rounded-full text-gray-300"
+                      className="bg-black border border-zinc-700 px-4 py-2 rounded-full text-gray-300 hover:bg-white hover:text-black transition-all duration-300"
                     >
                       {skill}
                     </span>
@@ -127,7 +136,7 @@ export default function Portfolio() {
 
               <p className="text-sm text-gray-500 mb-6">{project.tech}</p>
 
-              <button className="bg-white text-black px-5 py-2 rounded-xl font-semibold hover:scale-105 transition">
+              <button className="bg-white text-black px-5 py-2 rounded-xl font-semibold hover:scale-110 transition-all duration-300">
                 View Project
               </button>
             </div>

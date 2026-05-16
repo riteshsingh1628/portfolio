@@ -1,3 +1,4 @@
+import hero from "./assets/hero.png";
 export default function Portfolio() {
   const skills = {
     Languages: ["Python", "Java", "C", "JavaScript", "SQL"],

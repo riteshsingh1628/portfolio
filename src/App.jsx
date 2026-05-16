@@ -1,5 +1,3 @@
-import hero from "./assets/hero.png";
-
 export default function Portfolio() {
   const skills = {
     Languages: ["Python", "Java", "C", "JavaScript", "SQL"],
@@ -24,17 +22,9 @@ export default function Portfolio() {
   ];
 
   return (
-    <div className="bg-black text-white min-h-screen font-sans">
-      
+    <div className="bg-black text-white min-h-screen font-sans scroll-smooth">
       {/* Hero Section */}
       <section className="min-h-screen flex flex-col justify-center items-center text-center px-6">
-
-        <img
-          src={hero}
-          alt="Ritesh Kumar"
-          className="w-48 h-48 rounded-full object-cover border-4 border-white shadow-2xl mb-8"
-        />
-
         <h1 className="text-5xl md:text-7xl font-bold mb-4">
           Ritesh Kumar
         </h1>
@@ -52,7 +42,7 @@ export default function Portfolio() {
         <div className="flex gap-4 flex-wrap justify-center">
           <a
             href="#"
-            className="bg-white text-black px-6 py-3 rounded-2xl font-semibold hover:scale-105 transition"
+            className="bg-white text-black px-6 py-3 rounded-2xl font-semibold hover:scale-110 hover:bg-gray-200 transition-all duration-300 shadow-lg"
           >
             Download Resume
           </a>
@@ -60,7 +50,7 @@ export default function Portfolio() {
           <a
             href="https://github.com/"
             target="_blank"
-            className="border border-gray-600 px-6 py-3 rounded-2xl hover:bg-white hover:text-black transition"
+            className="border border-gray-600 px-6 py-3 rounded-2xl hover:bg-white hover:text-black hover:scale-110 transition-all duration-300 shadow-lg"
           >
             GitHub
           </a>
@@ -68,7 +58,7 @@ export default function Portfolio() {
           <a
             href="https://linkedin.com"
             target="_blank"
-            className="border border-gray-600 px-6 py-3 rounded-2xl hover:bg-white hover:text-black transition"
+            className="border border-gray-600 px-6 py-3 rounded-2xl hover:bg-white hover:text-black hover:scale-110 transition-all duration-300 shadow-lg"
           >
             LinkedIn
           </a>
@@ -79,7 +69,7 @@ export default function Portfolio() {
       <section className="py-20 px-6 max-w-6xl mx-auto">
         <h2 className="text-4xl font-bold mb-10 text-center">About Me</h2>
 
-        <div className="bg-zinc-900 rounded-3xl p-8 shadow-lg">
+        <div className="bg-zinc-900 rounded-3xl p-8 shadow-lg hover:scale-105 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 cursor-pointer">
           <p className="text-gray-300 leading-8 text-lg">
             I am a Computer Science undergraduate passionate about building
             scalable web applications and solving real-world problems. I have
@@ -126,7 +116,7 @@ export default function Portfolio() {
           {projects.map((project) => (
             <div
               key={project.title}
-              className="bg-zinc-900 rounded-3xl p-8 shadow-lg hover:scale-105 transition duration-300"
+              className="bg-zinc-900 rounded-3xl p-8 shadow-lg hover:scale-110 hover:-translate-y-3 hover:shadow-2xl transition-all duration-500 cursor-pointer"
             >
               <h3 className="text-3xl font-bold mb-4">{project.title}</h3>
 
@@ -152,15 +142,15 @@ export default function Portfolio() {
           </h2>
 
           <div className="space-y-6">
-            <div className="bg-zinc-900 p-6 rounded-2xl">
+            <div className="bg-zinc-900 p-6 rounded-2xl hover:scale-105 hover:bg-zinc-800 transition-all duration-300 cursor-pointer">
               Preliminary English Test (PET) – Cambridge University (2024)
             </div>
 
-            <div className="bg-zinc-900 p-6 rounded-2xl">
+            <div className="bg-zinc-900 p-6 rounded-2xl hover:scale-105 hover:bg-zinc-800 transition-all duration-300 cursor-pointer">
               Second Prize – Stack Hack Hackathon
             </div>
 
-            <div className="bg-zinc-900 p-6 rounded-2xl">
+            <div className="bg-zinc-900 p-6 rounded-2xl hover:scale-105 hover:bg-zinc-800 transition-all duration-300 cursor-pointer">
               Recognized for Outstanding Coordination – Multimedia Department
             </div>
           </div>
